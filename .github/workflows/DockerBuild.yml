@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2  # Fetches repository code
+        uses: actions/checkout@v3  # Fetches repository code
 
       - name: Log in to Docker Hub
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "ishika1108" --password-stdin
