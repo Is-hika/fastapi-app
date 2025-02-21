@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v2  # Fetches your repository code
 
       - name: Log in to Docker Hub
-        run: echo ${{ secrets.DOCKERHUB_TOKEN }} | echo docker login -u "ishika1108" --password-stdin
+        run: echo ${{ secrets.DOCKERHUB_TOKEN }} echo | docker login -u "ishika1108" --password-stdin
 
       - name: Build Docker Image
         run: docker build -t ishika1108/fastapi-app:latest .
